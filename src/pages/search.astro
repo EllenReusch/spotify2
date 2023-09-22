@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+import Navigation from "../components/Nav.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import PlaylistCard from "../components/PlaylistCard.astro";
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import TopBar from "../components/TopBar.astro";
+import Footer from "../components/Footer.astro";
+import Shelf from "../components/Shelf.astro";
+
+// const { header } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<a href="side2.html">Gå til side 2</a>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Home</title>
+  </head>
+  <body>
+    <Nav />
+    <TopBar />
+    <main>
+
+
+<MainLayout hasSearch={true} title="Search">...</MainLayout>
+  <main>
+    <PlaylistCard
+      newBadge={false}
+      header="Titel"
+      imgPath="https://api.lorem.space/image/album?w=150&h=150&hash=8B7BCDC2"
+    />
+    <PlaylistCard
+      newBadge={true}
+      header="Halli Hallo"
+      imgPath="https://api.lorem.space/image/album?w=150&h=150&hash=500B67FB"
+    />
+    <PlaylistCard
+      header="Og lige et"
+      imgPath="https://api.lorem.space/image/album?w=150&h=150&hash=A89D0DE6"
+    />
+    <PlaylistCard
+      header="Øjeblik"
+      imgPath="https://api.lorem.space/image/album?w=150&h=150&hash=225E6693"
+    />
+    <PlaylistCard
+      newBadge={true}
+      header="Om lidt er det"
+      imgPath="https://api.lorem.space/image/album?w=150&h=150&hash=9D9539E7"
+    />
+    <PlaylistCard
+      header="WEEKEND"
+      imgPath="https://api.lorem.space/image/album?w=150&h=150&hash=BDC01094"
+    />
+  </main>
+</Mainlayout>
